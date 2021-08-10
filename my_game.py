@@ -1,3 +1,5 @@
+from random import randint
+
 def build_filed(r):
     filed = []
     fileds = []
@@ -11,6 +13,8 @@ def build_filed(r):
 def make_start_location(n):
     n[0][0] = 'x'
     return n 
+
+    
 
 def print_filed(n):
     for i in n:
@@ -88,13 +92,13 @@ def main():
 
         if user_direction == 'up':
             make_filed = start_up(make_filed)
-        if user_direction == 'down':
+        elif user_direction == 'down':
             make_filed = start_down(make_filed)
-        if user_direction == 'right':
+        elif user_direction == 'right':
             make_filed = start_right(make_filed)
-        if user_direction == 'left':
+        elif user_direction == 'left':
             make_filed = start_left(make_filed)
-        if user_direction == 'exit':
+        elif user_direction == 'exit':
             game = False 
         if game:
             print_filed(make_filed)
