@@ -37,10 +37,8 @@ def start_down(n):
     for i in filed_size:
         for r in filed_size:
             if n[i][r] == 'x':
-                if i == len(n) - 1:
-                    fide[0], fide[i - 1] = fide[i - 1] , fide[0]
-                else:
-                    fide[i] , fide[i + 1] = fide[i +1] , fide[i]
+                if not i == len(n) - 1:
+                    fide[i] , fide[i + 1] = fide[i + 1] , fide[i]
                     break
     return fide
 
